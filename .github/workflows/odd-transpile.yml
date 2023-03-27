@@ -1,0 +1,32 @@
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: gremid/tei-stylesheets-action@v.7.54.0.1
+        with:
+          transform: teitornc
+          source: ./zdl.odd
+          target: ./public/zdl.rnc
+      - uses: gremid/tei-stylesheets-action@v.7.54.0.1
+        with:
+          transform: teitorelaxng
+          source: ./zdl.odd
+          target: ./public/zdl.rng
+      - uses: gremid/tei-stylesheets-action@v.7.54.0.1
+        with:
+          transform: teitoschematron
+          source: ./zdl.odd
+          target: ./public/zdl.sch.xsl
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

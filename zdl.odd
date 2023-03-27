@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>TEI with maximal setup</title>
+        <author>Sebastian Rahtz</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>TEI Consortium</publisher>
+        <availability status="free">
+          <p>TEI material can be licensed differently depending on the
+          use you intend to make of it. Hence it is made available
+          under both the CC+BY and BSD-2 licences. The CC+BY licence
+          is generally appropriate for usages which treat TEI content
+          as data or documentation. The BSD-2 licence is generally
+          appropriate for usage of TEI content in a software
+          environment. For further information or clarification,
+          please contact the TEI Consortium (info@tei-c.org).</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Written from scratch.</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <schemaSpec ident="zdl" start="TEI teiCorpus">
+        <moduleRef n="01" key="tei"/>
+        <moduleRef n="02" key="header"/>
+        <moduleRef n="03" key="core"/>
+        <moduleRef n="04" key="textstructure"/>
+        <moduleRef n="05" key="gaiji"/>
+        <moduleRef n="06" key="verse"/>
+        <moduleRef n="07" key="drama"/>
+        <moduleRef n="08" key="spoken"/>
+        <moduleRef n="17" key="analysis"/>
+        <moduleRef n="09" key="dictionaries"/>
+        <moduleRef n="10" key="msdescription"/>
+        <moduleRef n="11" key="transcr"/>
+        <moduleRef n="12" key="textcrit"/>
+        <moduleRef n="13" key="namesdates"/>
+        <moduleRef n="14" key="figures"/>
+        <moduleRef n="15" key="corpus"/>
+        <moduleRef n="16" key="linking"/>
+        <moduleRef n="18" key="iso-fs"/>
+        <moduleRef n="19" key="nets"/>
+        <moduleRef n="21" key="certainty"/>
+        <moduleRef n="22" key="tagdocs"/>
+        <classSpec ident="att.linguistic" type="atts" mode="change">
+          <attList>
+            <attDef ident="dep" mode="change" usage="opt">
+              <datatype>
+                <dataRef key="teidata​.text"/>
+              </datatype>
+            </attDef>
+            <attDef ident="head" mode="change" usage="opt">
+              <datatype>
+                <dataRef key="teidata​.count"/>
+              </datatype>
+            </attDef>
+            <attDef ident="gender" mode="change" usage="opt">
+              <datatype>
+                <dataRef key="teidata​.text"/>
+              </datatype>
+            </attDef>
+            <attDef ident="case" mode="change" usage="opt">
+              <datatype>
+                <dataRef key="teidata​.text"/>
+              </datatype>
+            </attDef>
+            <attDef ident="number" mode="change" usage="opt">
+              <datatype>
+                <dataRef key="teidata​.text"/>
+              </datatype>
+            </attDef>
+            <attDef ident="tense" mode="change" usage="opt">
+              <datatype>
+                <dataRef key="teidata​.text"/>
+              </datatype>
+            </attDef>
+            <attDef ident="person" mode="change" usage="opt">
+              <datatype>
+                <dataRef key="teidata​.text"/>
+              </datatype>
+            </attDef>
+            <attDef ident="mood" mode="change" usage="opt">
+              <datatype>
+                <dataRef key="teidata​.text"/>
+              </datatype>
+            </attDef>
+            <attDef ident="degree" mode="change" usage="opt">
+              <datatype>
+                <dataRef key="teidata​.text"/>
+              </datatype>
+            </attDef>
+            <attDef ident="verb-form" mode="change" usage="opt">
+              <datatype>
+                <dataRef key="teidata​.text"/>
+              </datatype>
+            </attDef>
+            <attDef ident="pron-type" mode="change" usage="opt">
+              <datatype>
+                <dataRef key="teidata​.text"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>
